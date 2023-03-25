@@ -1,33 +1,29 @@
-let xCarro = 500;
-let yCarro = 40;
-let velocidadeCarro = 2.5;
+let inicioDaTela = 600;
 
-let xCarro2 = 500;
-let yCarro2 = 97;
-let velocidadeCarro2 = 3;
-
-let xCarro3 = 500;
-let yCarro3 = 149;
-let velocidadeCarro3 = 3.5;
+let yCarros = [40, 97, 149];
+let xCarros = [inicioDaTela, inicioDaTela, inicioDaTela];
+let velocidadeCarros = [2.5, 3, 3.5];
 
 function mostraCarro(){
-    image(imagemCarro, xCarro, yCarro, 50, 40);
-    image(imagemCarro2, xCarro2, yCarro2, 50, 40);
-    image(imagemCarro3, xCarro3, yCarro3, 50, 40);
+    for (let i = 0; i < imagemCarros.length; i++){
+        image(imagemCarros[i], xCarros[i], yCarros[i], 50, 40);
+    };
 };
 
 function movimentaCarro(){
-    xCarro -= velocidadeCarro;
-    xCarro2 -= velocidadeCarro2;
-    xCarro3 -= velocidadeCarro3;
+    for (let i = 0; i < xCarros.length; i++){
+        xCarros[i] -= velocidadeCarros[i];
+    };
 }
 
 function voltaPosicaoInicialDoCarro(){
-    if(xCarro < -60){
-        xCarro = 500;
-    } else if (xCarro2 < -60){
-        xCarro2 = 500;
-    } else if (xCarro3 <- 60){
-        xCarro3 = 500;
-    }
+    for (let i = 0; i < xCarros.length; i++){
+        if (passouTodaATela(xCarros[i])){
+            xCarros[i] = inicioDaTela;
+        }
+    };
+}
+
+function passouTodaATela(xCarro){
+    return xCarro < -60;
 }
