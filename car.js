@@ -38,12 +38,12 @@ function voltaPosicaoInicialDoCarro(){
             xCarrosEsquerda[i] = inicioDaTela;
         }
     };
-}
+};
 
 function passouDoInicioDaTela(xCarro){
     return xCarro < -60;
-}
+};
 
 function passouDoFimDaTela(xCarro){
     return xCarro > 660;
-}
+};

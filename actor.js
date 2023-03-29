@@ -22,7 +22,6 @@ function movimentaAtor(){
 };
 
 function verificaColisao(){
-    //collideRectCircle(x1, y1, width1, height1, cx, cy, diameter)
     for (let i = 0; i < xCarros.length; i++){
         colisao = collideRectCircle(xCarros[i], yCarros[i], comprimentoCarro, alturaCarro, xAtor, yAtor, diametroAtor * 0.6);
         if (colisao){
