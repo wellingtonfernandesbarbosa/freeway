@@ -2,8 +2,8 @@ let fimDaTela = 600;
 let inicioDaTela = 0;
 
 
-let yCarros = [40, 211, 149];
-let yCarrosEsquerda = [97, 263, 318];
+let yCarros = [40, 97, 149];
+let yCarrosEsquerda = [211, 263, 318];
 let xCarros = [fimDaTela, fimDaTela, fimDaTela];
 let xCarrosEsquerda = [inicioDaTela, inicioDaTela, inicioDaTela]
 let alturaCarro = 40;
